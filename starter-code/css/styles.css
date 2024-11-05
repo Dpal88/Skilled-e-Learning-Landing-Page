@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.card {
+    background: cadetblue;
+    max-width: 20.5rem;
+    position: relative;
+    padding: var(--spacing-800, 4rem) var(--spacing-400, 2rem) var(--spacing-500, 2.5rem) var(--spacing-400, 2rem);
+}
+.card svg {
+    /* position: absolute;
+    bottom: 150px; */
+
+    /* position: relative;
+    top: 30px;
+    left: 30px; */
+
+    position: absolute;
+    bottom: 170px;
+}
+.card-content {
+    /* background: cadetblue; */
+    /* padding: var(--spacing-800, 4rem) var(--spacing-400, 2rem) var(--spacing-500, 2.5rem) var(--spacing-400, 2rem); */
+}
