@@ -1,11 +1,59 @@
+:root {
+    --blue-900: rgba(19, 24, 63, 1);
+    --blue-600: rgba(102, 108, 163, 1);
+    --pink-600: rgba(247, 71, 128, 1);
+    --pink-300: rgba(255, 167, 195, 1);
+    --grey: rgba(131, 134, 154, 1);
+    --white: rgba(255, 255, 255, 1);
+
+    --gradient-pink: linear-gradient(180deg, rgba(255, 111, 72, 1), rgba(240, 42, 166, 1));
+    --gradient-purple: linear-gradient(180deg, rgba(72, 81, 255, 1), rgba(240, 42, 166, 1));
+
+    --spacing-100: .5rem;
+    --spacing-150: .75rem;
+    --spacing-200: 1rem;
+    --spacing-250: 1.25rem;
+    --spacing-300: 1.5rem;
+    --spacing-400: 2rem;
+    --spacing-500: 2.5rem;
+    --spacing-550: 2.75rem;
+    --spacing-600: 3rem;
+    --spacing-700: 3.5rem;
+    --spacing-800: 4rem;
+    --spacing-1000: 5rem;
+    --spacing-1600: 8rem;
+    --spacing-1800: 9rem;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url(../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
     margin: 0;
     padding: 0;
+}
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 img {
     max-width: 100%;
     display: block;
 }
+button {
+  font: inherit;
+}
+
+
+
+
 .cards-container {
     display: flex;
     flex-direction: column;
@@ -27,8 +75,4 @@ img {
 
     position: absolute;
     bottom: 170px;
-}
-.card-content {
-    /* background: cadetblue; */
-    /* padding: var(--spacing-800, 4rem) var(--spacing-400, 2rem) var(--spacing-500, 2.5rem) var(--spacing-400, 2rem); */
 }
