@@ -62,6 +62,7 @@ header {
         align-items: center;
         justify-content: space-between;
         max-width: 70rem;
+        width: 100%;
 
         /* svg {
             width: 4.95538rem;
@@ -120,9 +121,8 @@ header {
         }
     }
     .hero-img-wrapper {
-        /* position: relative;
-        left: 150px; */
         overflow: hidden;
+        
         img {
             width: 100%;
         }
@@ -207,6 +207,7 @@ footer {
         align-items: center;
         justify-content: space-between;
         max-width: 70rem;
+        width: 100%;
 
         svg {
 
@@ -231,7 +232,15 @@ footer {
 
 /* 768px = 48rem */
 @media (width > 48rem) {
+
+    header {
+        display: flex;
+        justify-content: center;
+        padding: var(--spacing-300) var(--spacing-550);
+    }
+
     .hero-container {
+        padding: var(--spacing-800) var(--spacing-550);
 
         .hero-inner-container {
             flex-direction: row;
@@ -239,17 +248,16 @@ footer {
     }
 
     main {
+        padding: var(--spacing-800) var(--spacing-550) var(--spacing-1800);
 
         .cards-container {
             grid-template-columns: repeat(2, 1fr);
             gap: var(--spacing-100) var(--spacing-300);
 
             #card-one {
-                /* height: 20.125rem; */
                 margin-top: var(--spacing-800);
             }
             .card {
-                /* height: 20.125rem; */
 
                 .card-content {
                     height: 20.125rem;
@@ -257,14 +265,17 @@ footer {
             }
         }
     }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        padding: var(--spacing-300) var(--spacing-550);
+    }
+
 }
 
 /* 1280px = 80rem */
 @media (width > 80rem) {
-
-    header {
-        /* display: flex; */
-    }
 
     main {
 
