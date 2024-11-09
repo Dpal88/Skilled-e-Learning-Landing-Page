@@ -29,8 +29,35 @@
           <button>Get Started</button>
         </div>
 
-        <div>
-          <img src="assets/image-hero-mobile.png" alt="hero image">
+        <div class="hero-img-wrapper">
+
+          <picture>
+            <source 
+              media="(max-width: 768px)" 
+              srcset="assets/image-hero-mobile.png 1x,
+                      assets/image-hero-mobile@2x.png 2x"
+            />
+            <source
+              media="(max-width: 1280px)"
+              srcset="assets/image-hero-tablet.png 1x,
+                      assets/image-hero-tablet@2x.png 2x"
+            />
+            <source
+            srcset="assets/image-hero-desktop.png 1x,
+                    assets/image-hero-desktop@2x.png 2x"
+            />
+            <img src="assets/image-hero-mobile.png" alt="">
+          </picture>
+          <!-- <img
+            srcset="assets/image-hero-desktop.png 1046w,
+                    assets/image-hero-desktop@2x.png 2x,
+                    assets/image-hero-tablet.png 695w,
+                    assets/image-hero-tablet@2x.png 2x,
+                    assets/image-hero-mobile.png 435w,
+                    assets/image-hero-mobile@2x.png 2x"
+            src="assets/image-hero-mobile.png"
+            alt="hero image"
+           /> -->
         </div>
 
       </div>
