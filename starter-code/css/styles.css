@@ -53,6 +53,12 @@ picture {
 button {
   font: inherit;
 }
+button:hover {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
 
 
 /* ------------ header ------------  */
@@ -75,6 +81,11 @@ header {
             padding: var(--spacing-200, 1rem) var(--font-size-desktop-text-preset-3, 2rem);
             border: none;
             border-radius: 1.75rem;
+            z-index: 2;
+
+            a {
+                color: var(--white);
+            }
         }
     }
 }
@@ -116,6 +127,10 @@ header {
             padding: var(--spacing-200) var(--spacing-400);
             border: none;
             border-radius: 1.75rem;
+
+            a {
+                color: var(--white);
+            }
         }
 
         .hero-img-wrapper {
@@ -188,6 +203,10 @@ main {
                     line-height: 150%;
                     border: none;
                     background: transparent;
+
+                    a {
+                        color: var(--pink-600);
+                    }
                 }
             }
         }
@@ -218,6 +237,10 @@ footer {
             padding: var(--spacing-150) var(--spacing-300);
             border: none;
             border-radius: 1.75rem;
+
+            a {
+                color: var(--white);
+            }
         }
     }
 }
@@ -271,11 +294,16 @@ footer {
 
             #card-one {
                 margin-top: var(--spacing-800);
+                padding: var(--spacing-800) var(--spacing-400) var(--spacing-500);
             }
             .card {
 
                 .card-content {
                     height: 20.125rem;
+
+                    p {
+                        font-size: 1.125rem;
+                    }
                 }
             }
         }
@@ -301,6 +329,10 @@ footer {
 
         .hero-inner-container {
 
+            h1 {
+                font-size: 3.5rem;
+            }
+
             .hero-img-wrapper {
 
                 picture {
@@ -318,6 +350,29 @@ footer {
         .cards-container {
             grid-template-columns: repeat(3, 1fr);
             gap: var(--spacing-300) var(--spacing-400);
+
+            #card-one {
+                
+                h2 {
+                    font-size: 2rem;
+                }
+            }
+            
+            .card {
+
+                .card-content {
+                    display: grid;
+
+                    h3 {
+                        font-size: 1.5rem;
+                    }
+
+                    button {
+                        justify-self: flex-start;
+                        align-self: flex-end;
+                    }
+                }
+            }
         }
     }
 
