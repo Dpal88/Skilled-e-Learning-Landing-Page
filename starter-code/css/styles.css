@@ -75,9 +75,15 @@ header {
             font-weight: 700;
             line-height: 150%;
             padding: var(--spacing-200, 1rem) var(--font-size-desktop-text-preset-3, 2rem);
-            border: none;
+            border: 1px solid var(--blue-900);
             border-radius: 1.75rem;
             z-index: 2;
+
+            transition: all .4s ease-in-out;
+        }
+        a:hover {
+            color: var(--blue-900);
+            background: var(--white);
         }
     }
 }
@@ -107,7 +113,7 @@ header {
             font-size: 1.125rem;
             font-weight: 500;
             line-height: 150%;
-            margin: var(--spacing-300) 0 var(--spacing-500);
+            margin-top: var(--spacing-300);
         }
         a {
             background: var(--gradient-pink);
@@ -115,6 +121,8 @@ header {
             font-size: 1.125rem;
             font-weight: 700;
             line-height: 150%;
+            display: inline-block;
+            margin-top: var(--spacing-500);
             padding: var(--spacing-200) var(--spacing-400);
             border: none;
             border-radius: 1.75rem;
@@ -164,8 +172,10 @@ main {
             box-shadow: 0px 25px 50px 0px rgba(6, 22, 141, 0.04);
             
         }
+
         .card {
             position: relative;
+            transition: transform .3s ease-in-out;
 
             svg {
                 position: relative;
@@ -203,9 +213,31 @@ main {
                     font-weight: 700;
                     line-height: 150%;
                     border: none;
-                    background: transparent;
+                    position: relative;
+                }
+                a:after {
+                    content: ''; /* Add content after the element */
+                    position: absolute; /* Position absolute for pseudo-element */
+                    width: 97%; /* Full width */
+                    transform: scaleX(0); /* Initial scale of 0 for underline effect */
+                    height: 2px; /* Height of the underline */
+                    bottom: -2px; /* Align to bottom */
+                    left: 1.5px; /* Align to left */
+                    background-color: var(--pink-600); /* Background color of the underline */
+                    transform-origin: bottom right; /* Set transform origin */
+                    transition: transform 0.25s ease-out; /* Transition effect for the underline */
+                }
+                a:hover:after {
+                    transform: scaleX(1); /* Scale the underline on hover */
+                    transform-origin: bottom left; /* Set transform origin */
                 }
             }
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card:hover .card-content {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
     }
 }
@@ -233,7 +265,20 @@ footer {
             height: var(--spacing-600);
             padding: var(--spacing-150) var(--spacing-300);
             border: none;
+            border: 1px solid var(--blue-900);
             border-radius: 1.75rem;
+
+            transition: all .4s ease-in-out;
+        }
+        a:hover {
+
+            color: var(--pink-600);
+            background: var(--blue-900);
+            border: 1px solid var(--white);
+
+            /* -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border: 1px solid var(--white); */
         }
     }
 }
@@ -293,9 +338,14 @@ footer {
 
                 .card-content {
                     height: 20.125rem;
+                    display: grid;
 
                     p {
                         font-size: 1.125rem;
+                    }
+                    a {
+                        justify-self: flex-start;
+                        align-self: flex-end;
                     }
                 }
             }
@@ -354,15 +404,10 @@ footer {
             .card {
 
                 .card-content {
-                    display: grid;
+
 
                     h3 {
                         font-size: 1.5rem;
-                    }
-
-                    a {
-                        justify-self: flex-start;
-                        align-self: flex-end;
                     }
                 }
             }
