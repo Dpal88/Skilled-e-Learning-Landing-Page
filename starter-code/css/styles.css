@@ -50,14 +50,10 @@ picture {
     max-width: 100%;
     display: block;
 }
-button {
-  font: inherit;
-}
-button:hover {
-    cursor: pointer;
-}
+
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -72,7 +68,7 @@ header {
         max-width: 70rem;
         width: 100%;
 
-        button {
+        a {
             background: var(--blue-900);
             color: var(--white);
             font-size: 1.125rem;
@@ -82,10 +78,6 @@ header {
             border: none;
             border-radius: 1.75rem;
             z-index: 2;
-
-            a {
-                color: var(--white);
-            }
         }
     }
 }
@@ -115,22 +107,31 @@ header {
             font-size: 1.125rem;
             font-weight: 500;
             line-height: 150%;
-            margin-top: var(--spacing-300);
+            margin: var(--spacing-300) 0 var(--spacing-500);
         }
-        button {
+        a {
             background: var(--gradient-pink);
             color: var(--white);
             font-size: 1.125rem;
             font-weight: 700;
             line-height: 150%;
-            margin-top: var(--spacing-500);
             padding: var(--spacing-200) var(--spacing-400);
             border: none;
             border-radius: 1.75rem;
 
+            transition: transform .3s ease-in-out, box-shadow .3s ease;
+
             a {
                 color: var(--white);
             }
+        }
+
+        a:hover {
+            transform: translateY(3px);
+            box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px 5px;
+        }
+        a:focus {
+            box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px 5px;
         }
 
         .hero-img-wrapper {
@@ -196,17 +197,13 @@ main {
                     font-weight: 700;
                     line-height: 150%;
                 }
-                button {
+                a {
                     color: var(--pink-600);
                     font-size: 1.125rem;
                     font-weight: 700;
                     line-height: 150%;
                     border: none;
                     background: transparent;
-
-                    a {
-                        color: var(--pink-600);
-                    }
                 }
             }
         }
@@ -225,7 +222,7 @@ footer {
         max-width: 70rem;
         width: 100%;
 
-        button {
+        a {
             background: var(--gradient-purple);
             color: var(--white);
             display: flex;
@@ -237,10 +234,6 @@ footer {
             padding: var(--spacing-150) var(--spacing-300);
             border: none;
             border-radius: 1.75rem;
-
-            a {
-                color: var(--white);
-            }
         }
     }
 }
@@ -367,7 +360,7 @@ footer {
                         font-size: 1.5rem;
                     }
 
-                    button {
+                    a {
                         justify-self: flex-start;
                         align-self: flex-end;
                     }
